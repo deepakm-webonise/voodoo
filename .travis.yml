@@ -1,6 +1,6 @@
 language: ruby
 rvm:
-  - 2.0.0-p647
+  - 2.0.0
 
 addons:
   postgresql: '9.3'
@@ -8,6 +8,7 @@ addons:
 before_script:
   - psql -c 'create database voodoo_test;' -U postgres
   - cp config/database.yml.example config/database.yml
+  - bundle exec rake db:migrate RAILS_ENV=test
 
 script: 'bundle exec rspec spec/'
 
