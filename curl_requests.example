@@ -1,0 +1,11 @@
+=============================== Register user ==================================
+
+  curl -H "Content-Type: application/json" -d '{"email": "deepak@weboapps.com"}' -X POST http://localhost:3000/api/v1/register
+
+================================ Create a job ==================================
+
+  curl -H "API-KEY: UjqO5Aymw70qPoAVKcgSVwmm" -H "Content-Type: application/json" -d '{"source_url": "http://www.switchidea.com/uploads/cache/62/2e/622e2a83b8e3af11436bd2812dcb2380.jpg", "actions": {"resize": "200x200", "sketch": null}, "notification_url": "http://path/to/recieve/notifications"}' -X POST http://localhost:3000/api/v1/jobs
+
+================================== Download ====================================
+
+  curl -H "API-KEY: UjqO5Aymw70qPoAVKcgSVwmm" -H "Content-Type: application/json" -O http://localhost:3000/api/v1/jobs/40/622e2a83b8e3af11436bd2812dcb2380.jpg
