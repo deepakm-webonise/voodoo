@@ -14,6 +14,7 @@ module Voodoo
       g.stylesheets false
     end
 
+    config.sass.preferred_syntax = :sass
     config.active_record.raise_in_transactional_callbacks = true
   end
 end
